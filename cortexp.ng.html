@@ -1,0 +1,19 @@
+<div ng-controller="CortexpCtrl">
+  <h1>Cortexp</h1>
+  <hr>
+  <form class="publication">
+    <label>
+      <input type="text" placeholder="Titulo" ng-model="post.title" />
+    </label>
+    <br><br>
+    <label>
+      <textarea placeholder="Conteúdo" ng-model="post.body"></textarea>
+    </label>
+    <br>
+    <button ng-click="publish(post)">Publicar</button>
+  </form>
+  <hr>
+  <ul>
+    <li ng-repeat="article in posts">{{article.title}} - {{article.createdAt | prettyDate}}</li>
+  </ul>
+</div>
